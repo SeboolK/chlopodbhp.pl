@@ -42,6 +42,25 @@
           j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-MWCH2RMH');
         </script>
+
+        <!-- Kod od Google -->
+        <script>
+            const CONFIGURATION = {
+              "locations": [
+                {"title":"Wita Stwosza 57","address1":"Wita Stwosza 57","address2":"35-113 Rzeszów, Polska","coords":{"lat":50.036912352011065,"lng":21.984498033729555},"placeId":"ChIJ1a6jswn7PEcRkxcqoyvbRAc"}
+              ],
+              "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+              "mapsApiKey": "AIzaSyCqGx0TstbH7JDupnHInFw5jkpuyEslxGk",
+              "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+            };
+          </script>
+          <script type="module">
+            document.addEventListener('DOMContentLoaded', async () => {
+              await customElements.whenDefined('gmpx-store-locator');
+              const locator = document.querySelector('gmpx-store-locator');
+              locator.configureFromQuickBuilder(CONFIGURATION);
+            });
+          </script>
     
         <title>Chłop od BHP – Kompleksowa Obsługa BHP i Prawa Pracy</title>
         <link rel="stylesheet" href="styles.css">
@@ -168,7 +187,15 @@
                 <li><strong>Zwiększona Produktywność:</strong> Zdrowi i bezpieczni pracownicy są bardziej produktywni.</li>
                 <li><strong>Poprawa Wizerunku Firmy:</strong> Dbanie o BHP świadczy o profesjonalizmie i odpowiedzialności.</li>
             </ul>
-        </section>        
+        </section>   
+        
+        <section class="store-locator">
+            <h2>Znajdź Naszą Lokalizację</h2>
+            <!-- Wstaw tutaj kod z Google -->
+            <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
+            <gmpx-api-loader key="AIzaSyCqGx0TstbH7JDupnHInFw5jkpuyEslxGk" solution-channel="GMP_QB_locatorplus_v11_c"></gmpx-api-loader>
+            <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+        </section>
 
         <section class="contact framed-section">
             <h2>Skontaktuj się z nami:</h2>
