@@ -478,16 +478,18 @@ footer p
     font-weight: bold; 
 }
 
-/* Kontener mapy */
+/* Kontener mapy - szerokość dopasowana do innych elementów */
 .store-locator {
-    width: 100%;
+    width: 80%;
+    max-width: 1050px;  /* Maksymalna szerokość mapy */
     height: 400px;
-    margin: 20px 0;
+    margin: 20px auto;  /* Centrowanie mapy */
     border: 3px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
+    background-color: #fff;
 }
 
 /* Stylowanie iframe (mapy) */
@@ -524,14 +526,42 @@ footer p
 /* Responsywność mapy */
 @media (max-width: 768px) {
     .store-locator {
-        height: 300px;
+        height: 300px;  /* Mniejsza wysokość mapy na urządzeniach mobilnych */
     }
 }
 
 @media (max-width: 480px) {
     .store-locator {
-        height: 250px;
+        height: 250px;  /* Jeszcze mniejsza wysokość mapy na bardzo małych ekranach */
     }
 }
 
 
+
+/* Sekcja z ramkami */
+.framed-section {
+    border: 3.5px solid #ffffff;
+    padding: 20px;
+    margin: 45px auto;
+    background: #fff;
+    border-radius: 8px;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(15, 14, 105, 0.473);
+    transition: transform 0.6s ease, box-shadow 0.6s ease, background-color 0.6s ease;
+}
+
+/* Efekt hover dla sekcji */
+.framed-section:hover {
+    transform: scale(1.02); /* Powiększenie sekcji */
+    box-shadow: 0 6px 12px rgba(26, 36, 128, 0.377); /* Zwiększony cień */
+    background-color: #ffffff; /* Zmiana koloru tła */
+}
+
+/* Sekcja "Skontaktuj się z nami", "Znajdź naszą lokalizację", itp. */
+.contact-item:hover, 
+.store-locator:hover, 
+.biography:hover {
+    transform: scale(1.02); /* Powiększenie na hover */
+    box-shadow: 0 6px 12px rgba(18, 20, 128, 0.486); /* Zwiększenie cienia */
+    background-color: #ffffff; /* Zmiana koloru tła */
+}
