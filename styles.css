@@ -478,34 +478,60 @@ footer p
     font-weight: bold; 
 }
 
-/* Stylowanie kontenera mapy */
+/* Kontener mapy */
 .store-locator {
     width: 100%;
-    height: 400px;  /* Możesz dostosować wysokość do swoich potrzeb */
+    height: 400px;
     margin: 20px 0;
-    border: 3px solid #ccc; /* Możesz dodać obramowanie, jeśli chcesz */
-    border-radius: 8px;  /* Zaokrąglenie rogów */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtelny cień wokół mapy */
-    overflow: hidden;  /* Ukrycie części mapy, które wychodzą poza kontener */
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
 }
 
 /* Stylowanie iframe (mapy) */
 .store-locator iframe {
     width: 100%;
     height: 100%;
-    border: 0; /* Usuwa domyślne obramowanie */
+    border: 0;
+}
+
+/* Dodanie przycisków powiększania i zmniejszania */
+.store-locator .zoom-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.store-locator .zoom-buttons button {
+    background-color: #20252b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.store-locator .zoom-buttons button:hover {
+    background-color: #e7da20;
 }
 
 /* Responsywność mapy */
 @media (max-width: 768px) {
     .store-locator {
-        height: 300px;  /* Mniejsza wysokość mapy na urządzeniach mobilnych */
+        height: 300px;
     }
 }
 
 @media (max-width: 480px) {
     .store-locator {
-        height: 250px;  /* Jeszcze mniejsza wysokość mapy na bardzo małych ekranach */
+        height: 250px;
     }
 }
+
 
