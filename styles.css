@@ -482,7 +482,7 @@ footer p
 .store-locator {
     width: 80%;
     max-width: 1050px;  /* Maksymalna szerokość mapy */
-    height: 400px;
+    height: 500px;
     margin: 20px auto;  /* Centrowanie mapy */
     border: 3px solid #ccc;
     border-radius: 8px;
@@ -507,6 +507,7 @@ footer p
     display: flex;
     flex-direction: column;
     gap: 5px;
+    z-index: 10; /* Upewnienie się, że przyciski są nad mapą */
 }
 
 .store-locator .zoom-buttons button {
@@ -526,15 +527,26 @@ footer p
 /* Responsywność mapy */
 @media (max-width: 768px) {
     .store-locator {
-        height: 300px;  /* Mniejsza wysokość mapy na urządzeniach mobilnych */
+        height: 500px;  /* Większa wysokość dla lepszej widoczności */
     }
 }
 
 @media (max-width: 480px) {
     .store-locator {
-        height: 250px;  /* Jeszcze mniejsza wysokość mapy na bardzo małych ekranach */
+        height: 400px;  /* Zwiększona wysokość dla telefonów */
+    }
+
+    .store-locator .zoom-buttons {
+        top: auto;
+        bottom: 10px; /* Przesunięcie przycisków na dół mapy */
+        right: 10px;
+    }
+
+    .store-locator .zoom-buttons button {
+        padding: 8px; /* Mniejsze przyciski dla lepszego dopasowania */
     }
 }
+
 
 
 
