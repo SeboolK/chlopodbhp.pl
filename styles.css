@@ -557,11 +557,11 @@ footer p
     background-color: #ffffff; /* Zmiana koloru tła */
 }
 
-/* Sekcja "Skontaktuj się z nami", "Znajdź naszą lokalizację", itp. */
+/* Sekcja "Skontaktuj się z nami" i "Biografia" */
 .contact-item:hover, 
-.store-locator:hover, 
 .biography:hover {
     transform: scale(1.02); /* Powiększenie na hover */
     box-shadow: 0 6px 12px rgba(18, 20, 128, 0.486); /* Zwiększenie cienia */
     background-color: #ffffff; /* Zmiana koloru tła */
 }
+
